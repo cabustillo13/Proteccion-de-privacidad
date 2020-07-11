@@ -4,7 +4,7 @@
 import cv2
 
 # Incluir imagen a analizar
-#image = cv2.imread("./Imagenes/mona-lisa.jpg")
+image = cv2.imread("./Imagenes/mona-lisa.jpg")
 #image = cv2.imread("./Imagenes/monjes.jpg")
 
 result_image = image.copy()
