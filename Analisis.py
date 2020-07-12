@@ -1,6 +1,6 @@
 """Nota:Este dataset solo contiene imagenes caras de frente y no de perfil."""
 """Osea si alguien sale de perfil no lo reconocera, si se quiere incluirlos debera actualizar el dataset."""
-
+import numpy as np
 import cv2
 
 # Incluir imagen a analizar
@@ -8,6 +8,12 @@ image = cv2.imread("./Imagenes/mona-lisa.jpg")
 #image = cv2.imread("./Imagenes/monjes.jpg")
 
 result_image = image.copy()
+
+def unirImagenes(image, result_image):
+    
+    """Nota: Usando esta forma de concatenacion, solo se aplica a imagenes con dimensiones iguales"""
+    vis = np.concatenate((image, result_image), axis=1) #axis=0 para unir verticalmente y axis=1 para unir horizontalmente
+    cv2.imwrite('Comparacion.png', vis)
 
 def recortarCaras(image, result_image):
     
@@ -59,6 +65,9 @@ result_image = recortarCaras(image, result_image)
 print "Listo. Caras detectadas"
 # cv2.imshow("Detected face", result_image)
 cv2.imwrite("./Resultado.png", result_image) 
+
+#Comparar imagen original con la de salida
+unirImagenes(image, result_image)
 
 #Bibliografia
 #https://stackoverrun.com/es/q/4923564
