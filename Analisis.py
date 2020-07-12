@@ -64,7 +64,7 @@ result_image = recortarCaras(image, result_image)
 #Mostrar resultados
 print "Listo. Caras detectadas"
 # cv2.imshow("Detected face", result_image)
-cv2.imwrite("./Resultado.png", result_image) 
+cv2.imwrite("./Resultados.png", result_image) 
 
 #Comparar imagen original con la de salida
 unirImagenes(image, result_image)
