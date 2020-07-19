@@ -5,4 +5,4 @@ Desenfocar, pixelar o censurar parte de una imagen. Bastante útil para ocultar 
 
 Este programa consiste en un clasificador en cascada para detectar caras en una imagen. Esta imagen se convierte a una escala de grises, posteriormente se analizan todas las caras encontradas dentro de la imagen, se recorta cada una y se le aplica un filtro gaussiano para suavizar y pixelar el rostro. Todos esas etapas se realizan para cada rostro detectado. Luego se fusiona la imagen original con los rostros pixeladas.
 
-Imágenes obtenidas de Pixabay. La licencia ampara gratis para usos omerciales y no es necesario reconocimiento.
+Imágenes obtenidas de Pixabay. La licencia ampara: gratis para usos comerciales y no es necesario reconocimiento.
